@@ -29,6 +29,10 @@
           {{ toUpperCase(note) }}
           <button class="btn danger" @click="removeNote(index, $event)">Удалить</button>
         </li>
+
+        <hr />
+
+        <li><strong>Общее количество: {{ notes.length }}</strong> | Удвоенно на 2 : {{ doubleCountComputed }}</li>
       </ul>
       <div v-else="!notes.length">
         Список пуст

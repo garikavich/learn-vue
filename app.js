@@ -20,9 +20,17 @@ const App = {
         this.inputValue = ''
       }
     },
+    doubleCount() {
+      return this.notes.length * 2
+    },
     removeNote(index, event) {
       this.notes.splice(index, 1);
     }
+  },
+  computed: {
+    doubleCountComputed() {
+      return this.notes.length * 2
+    },
   }
 }
 
