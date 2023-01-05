@@ -19,10 +19,16 @@
                 v-on:input="inputChangeHandler"
         />
       </div>
-      <h2>inputValue: {{ inputValue }}</h2>
-      <button class="btn">Добавить</button>
+      <button class="btn" v-on:click="addNewNote">Добавить</button>
 
       <hr />
+
+      <ul class="list">
+        <li class="list-item" v-for="note in notes">
+          {{ note }}
+        </li>
+      </ul>
+
     </div>
   </div>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
