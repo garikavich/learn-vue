@@ -12,8 +12,8 @@
     <div class="card card center">
       <h1>Счетчик: {{ counter }}</h1>
       <div>
-        <button class="btn primary">Добавить</button>
-        <button class="btn danger">Вычесть</button>
+        <button class="btn primary" v-on:click="counter++">Добавить</button>
+        <button class="btn danger" v-on:click="counter--">Вычесть</button>
       </div>
     </div>
   </div>
