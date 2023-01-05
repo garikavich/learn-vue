@@ -8,9 +8,6 @@ const App = {
     }
   },
   methods: {
-    inputChangeHandler(event) {
-      return this.inputValue = event.target.value
-    },
     toUpperCase(item) {
       return item.toUpperCase()
     },
