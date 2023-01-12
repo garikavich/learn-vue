@@ -27,9 +27,12 @@
       <hr />
 
       <ul class="list" v-if="notes.length">
-        <li class="list-item" @click="removeNote(index, $event)" v-for="(note, index) in notes">
+        <li class="list-item" @click="removeNote(index, $event)" v-for="(note, index) in notes" :key="note">  <!-- $event =>
+         для
+        передачи браузерного события
+         -->
           <span :class="['primary', {'bold': note.length > 5}]">
-            {{ toUpperCase(note) }}&nbsp;&nbsp;&nbsp;<input type="text" @click="stopPropagation">
+            {{ toUpperCase(note) }}&nbsp;&nbsp;&nbsp;<input type="text" @click.stop> <!-- click.prevent.stop -->
           </span>
 <!--          <button class="btn danger" @click="removeNote(index, $event)">Удалить</button>-->
         </li>

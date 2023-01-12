@@ -22,9 +22,6 @@ const App = {
     },
     removeNote(index, event) {
       this.notes.splice(index, 1);
-    },
-    stopPropagation(event) {
-      event.stopPropagation()
     }
   },
   computed: {
