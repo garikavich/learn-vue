@@ -24,10 +24,13 @@ const App = {
       this.notes.splice(index, 1);
     }
   },
-  computed: {
+  computed: {             // computed this is getter
     doubleCountComputed() {
       return this.notes.length * 2
     },
+    filterArray() {
+      return this.notes.filter(i => i.includes('1'))
+    }
   },
   watch: {
     inputValue() {

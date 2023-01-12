@@ -27,7 +27,7 @@
       <hr />
 
       <ul class="list" v-if="notes.length">
-        <li class="list-item" @click="removeNote(index, $event)" v-for="(note, index) in notes" :key="note">  <!-- $event =>
+        <li class="list-item" @click="removeNote(index, $event)" v-for="(note, index) in filterArray" :key="note">  <!-- $event =>
          для
         передачи браузерного события
          -->
