@@ -17,12 +17,11 @@
       <div class="form-control">
         <input
                 type="text"
-               :placeholder="placeholderString"
-               v-model="inputValue"
-                @keypress.enter="addNewNote"
+                @keyup.enter="addItem"
+                ref="myInput"
         />
       </div>
-      <button class="btn" @click="addNewNote">Добавить</button>
+      <button class="btn" @click="addNewNote($event)">Добавить</button>  <!-- $event можно не прописывать -->
 
       <hr />
 

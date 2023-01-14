@@ -22,6 +22,12 @@ const App = {
     },
     removeNote(index, event) {
       this.notes.splice(index, 1);
+    },
+    addItem(event) {
+      this.notes.unshift(this.$refs.myInput.value);
+      this.$refs.myInput.value = ''
+      console.log(this.$refs.myInput.value)
+      console.log(event.key)
     }
   },
   computed: {             // computed this is getter
